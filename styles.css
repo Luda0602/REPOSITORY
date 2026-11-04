@@ -1,0 +1,102 @@
+/* reset styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+button {
+  font: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* header */
+.header {
+  border-bottom: 1px solid #ccc;
+}
+.container {
+  padding-inline: 20px;
+}
+.header-inner {
+  display: flex;
+  min-height: 56px;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: #000;
+  font-weight: 700;
+  font-size: 28px;
+  text-decoration: none;
+}
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  min-width: 44px;
+  min-height: 44px;
+}
+/* hero */
+.hero {
+  padding-top: 32px;
+}
+.hero-label {
+  margin-bottom: 12px;
+  color: #1535d1;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.hero-title {
+  margin-bottom: 16px;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.05;
+}
+.hero-description {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.hero-cta {
+  display: inline-block;
+  background-color: #1535d1;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 20px;
+}
+.hero-image {
+  width: 100%;
+  margin-top: 24px;
+}
+/* services */
+.services {
+  padding-top: 24px;
+}
+.services h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+.services-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.services-list > li {
+  padding: 12px 0;
+  font-weight: 700;
+  border-bottom: 1px solid #ccc;
+}
