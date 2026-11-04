@@ -35,12 +35,50 @@
         <div class="container">
           <h2>Послуги</h2>
           <ul class="services-list">
-            <li>Візитки</li>
-            <li>Листівки</li>
-            <li>Плакати</li>
+            <li>
+              <span>Візитки</span>
+              <span aria-hidden="true">→</span>
+            </li>
+            <li>
+              <span>Листівки</span>
+              <span aria-hidden="true">→</span>
+            </li>
+            <li>
+              <span>Плакати</span>
+              <span aria-hidden="true">→</span>
+            </li>
           </ul>
         </div>
       </section>
+      <section class="order" id="order">
+        <div class="container">
+          <h2>Замовити друк</h2>
+          <form class="order-form">
+            <label for="customer-name">Ваше ім’я</label>
+            <input
+              type="text"
+              id="customer-name"
+              name="customerName"
+              autocomplete="name"
+              required
+            />
+            <label for="customer-phone">Телефон</label>
+            <input
+              type="tel"
+              id="customer-phone"
+              name="phone"
+              autocomplete="tel"
+              required
+            />
+            <button type="submit" class="order-submit">Надіслати заявку</button>
+          </form>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Відбиток</p>
+      </div>
+    </footer>
   </body>
 </html>
