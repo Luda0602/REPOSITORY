@@ -22,6 +22,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+:root {
+  --color-primary: #1535d1;
+  --color-primary-hover: #1028a6;
+}
 /* header */
 .header {
   border-bottom: 1px solid #ccc;
@@ -43,6 +47,9 @@ img {
   font-size: 28px;
   text-decoration: none;
 }
+.header-nav {
+  display: none;
+}
 .menu-button {
   background: none;
   border: none;
@@ -56,7 +63,7 @@ img {
 }
 .hero-label {
   margin-bottom: 12px;
-  color: #1535d1;
+  color: var(--color-primary);
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -74,11 +81,15 @@ img {
 }
 .hero-cta {
   display: inline-block;
-  background-color: #1535d1;
+  background-color: var(--color-primary);
   color: #fff;
   font-weight: 700;
   text-decoration: none;
   padding: 12px 20px;
+  transition: background-color 0.2s ease;
+}
+.hero-cta:hover {
+  background-color: var(--color-primary-hover);
 }
 .hero-image {
   width: 100%;
@@ -116,32 +127,49 @@ img {
 .order h2 {
   font-size: 28px;
   margin-bottom: 16px;
+  text-align: center;
 }
 .order-form {
   display: flex;
   flex-direction: column;
+  gap: 16px;
+  max-width: 480px;
+  margin-inline: auto;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 }
-.order-form input {
+.order-form input,
+.order-form textarea {
   padding: 12px;
   border: 1px solid #ccc;
   font: inherit;
   min-width: 0;
 }
-.order-form input:focus {
-  outline: 2px solid #1535d1;
+.order-form input:focus,
+.order-form textarea {
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
+.order-form textarea {
+  resize: vertical;
+}
 .order-submit {
-  background-color: #1535d1;
+  background-color: var(--color-primary);
   color: #fff;
   font-weight: 700;
   padding: 12px 20px;
   border: none;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.order-submit:hover {
+  background-color: var(--color-primary-hover);
 }
 .order-submit:focus {
-  outline: 2px solid #1535d1;
+  outline: 2px solid var(--color-primary);
   outline-offset: 3px;
 }
 /* footer */
@@ -150,4 +178,78 @@ img {
   padding-block: 20px;
   font-size: 14px;
   color: #666;
+}
+/* Планшетна версія  */
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 56px;
+  }
+  .hero {
+    padding-top: 48px;
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    align-items: center;
+  }
+  .hero-image {
+    margin-top: 0;
+  }
+  .services {
+    padding-top: 48px;
+  }
+  .order {
+    padding-block: 48px;
+  }
+  .header-nav {
+    display: flex;
+    gap: 24px;
+  }
+  .header-nav a {
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    padding-block: 12px;
+    transition: color 0.2s ease;
+  }
+  .header-nav a:hover {
+    color: var(--color-primary);
+  }
+  .menu-button {
+    display: none;
+  }
+  .order-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 640px;
+  }
+  .order-submit {
+    grid-column: 1 / -1;
+  }
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .services-list > li:last-child {
+    border-bottom: 1px solid #ccc;
+  }
+}
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 64px;
+  }
+  .hero-inner {
+    gap: 48px;
+  }
+  .header-inner {
+    min-height: 80px;
+  }
+  .logo {
+    font-size: 32px;
+  }
+  .header-nav {
+    gap: 32px;
+  }
 }

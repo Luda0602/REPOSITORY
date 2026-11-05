@@ -10,6 +10,10 @@
     <header class="header">
       <div class="container header-inner">
         <a class="logo" href="/">Відбиток</a>
+        <nav class="header-nav" aria-label="Основна навігація">
+          <a href="#services">Послуги</a>
+          <a href="#order">Замовити друк</a>
+        </nav>
         <button class="menu-button" aria-label="Відкрити меню" type="button">
           ☰
         </button>
@@ -17,13 +21,15 @@
     </header>
     <main>
       <section class="hero">
-        <div class="container">
-          <p class="hero-label">Поліграфія у Києві</p>
-          <h1 class="hero-title">Друк для ваших ідей</h1>
-          <p class="hero-description">
-            Візитки, листівки й плакати для вашого бізнесу.
-          </p>
-          <a class="hero-cta" href="#order">Замовити друк</a>
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <p class="hero-label">Поліграфія у Києві</p>
+            <h1 class="hero-title">Друк для ваших ідей</h1>
+            <p class="hero-description">
+              Візитки, листівки й плакати для вашого бізнесу.
+            </p>
+            <a class="hero-cta" href="#order">Замовити друк</a>
+          </div>
           <img
             src="./img/hero.png"
             class="hero-image"
@@ -31,7 +37,7 @@
           />
         </div>
       </section>
-      <section class="services">
+      <section class="services" id="services">
         <div class="container">
           <h2>Послуги</h2>
           <ul class="services-list">
@@ -54,22 +60,31 @@
         <div class="container">
           <h2>Замовити друк</h2>
           <form class="order-form">
-            <label for="customer-name">Ваше ім’я</label>
-            <input
-              type="text"
-              id="customer-name"
-              name="customerName"
-              autocomplete="name"
-              required
-            />
-            <label for="customer-phone">Телефон</label>
-            <input
-              type="tel"
-              id="customer-phone"
-              name="phone"
-              autocomplete="tel"
-              required
-            />
+            <div class="form-field">
+              <label for="customer-name">Ваше ім’я</label>
+
+              <input
+                type="text"
+                id="customer-name"
+                name="customerName"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="customer-phone">Телефон</label>
+              <input
+                type="tel"
+                id="customer-phone"
+                name="phone"
+                autocomplete="tel"
+                required
+              />
+            </div>
+            <div class="form-field form-field-wide">
+              <label for="order-details">Що потрібно надрукувати?</label>
+              <textarea id="order-details" name="details" rows="4"></textarea>
+            </div>
             <button type="submit" class="order-submit">Надіслати заявку</button>
           </form>
         </div>
